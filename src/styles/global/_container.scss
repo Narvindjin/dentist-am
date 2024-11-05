@@ -1,0 +1,18 @@
+@use "../helper.scss";
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include helper.vp-768 {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include helper.vp-1280 {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1500px;
+  }
+}
