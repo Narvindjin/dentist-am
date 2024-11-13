@@ -100,24 +100,24 @@
       <section class="hero">
         <div class="hero__background-desktop">
           <picture>
-            <source type="image/webp" srcset="img/hero-bg.webp, img/hero-bg@2x.webp 2x" />
-            <source srcset="img/hero-bg.jpg, img/hero-bg@2x.jpg 2x" />
-            <img src="img/hero-bg.jpg" width="1900" height="843" alt="Фотография стоматологического кабинета">
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/hero-bg.webp, img/hero-bg@2x.webp 2x" />
+            <source media="(min-width: 1280px)" srcset="img/hero-bg.jpg, img/hero-bg@2x.jpg 2x" />
+            <img fetchpriority="high" src="img/hero-bg.jpg" width="1900" height="843" alt="Фотография стоматологического кабинета">
           </picture>
         </div>
         <div class="container hero__container">
           <div class="hero__assortment-photo-wrapper hero__assortment-photo-wrapper--desktop">
             <div class="hero__assortment-photo-container">
               <picture>
-                <source type="image/webp" srcset="img/babayan-hero.webp, img/babayan-hero@2x.webp 2x" />
-                <source srcset="img/babayan-hero.png, img/babayan-hero@2x.png 2x" />
-                <img src="img/babayan-hero.png" width="493" height="737" alt="Фотография Бабаяна Давида">
+                <source media="(min-width: 1280px)" type="image/webp" srcset="img/babayan-hero.webp, img/babayan-hero@2x.webp 2x" />
+                <source media="(min-width: 1280px)" srcset="img/babayan-hero.png, img/babayan-hero@2x.png 2x" />
+                <img fetchpriority="high" src="img/babayan-hero.png" width="493" height="737" alt="Фотография Бабаяна Давида">
               </picture>
             </div>
             <div class="hero__assortment-signature-container">
               <picture>
-                <source type="image/webp" srcset="img/signature-desktop.webp, img/signature-desktop@2x.webp 2x" />
-                <source srcset="img/signature-desktop.png, img/signature-desktop@2x.png 2x" />
+                <source media="(min-width: 1280px)" type="image/webp" srcset="img/signature-desktop.webp, img/signature-desktop@2x.webp 2x" />
+                <source media="(min-width: 1280px)" srcset="img/signature-desktop.png, img/signature-desktop@2x.png 2x" />
                 <img loading="lazy" src="img/signature-desktop.png" width="131" height="85"
                   alt="Подпись Бабаяна Давида">
               </picture>
@@ -191,7 +191,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/hero-image-mobile.webp, img/hero-image-mobile@2x.webp 2x" />
                       <source srcset="img/hero-image-mobile.png, img/hero-image-mobile@2x.png 2x" />
-                      <img src="img/hero-image-mobile.png" width="186" height="255" alt="Фотография Бабаяна Давида">
+                      <img fetchpriority="high" src="img/hero-image-mobile.png" width="186" height="255" alt="Фотография Бабаяна Давида">
                     </picture>
                   </div>
                   <div class="hero__assortment-lower-container">
