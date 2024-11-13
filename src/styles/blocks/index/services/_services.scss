@@ -1,0 +1,198 @@
+@use "../../../helper";
+
+.services__link {
+    @include helper.link-button;
+}
+
+.services__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.services__title {
+    @include helper.second-title;
+
+    & b {
+        font-weight: 700;
+    }
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    max-width: 500px;
+
+    @include helper.vp-768 {
+        margin-bottom: 22px;
+        max-width: 750px;
+    }
+
+    @include helper.vp-1500 {
+        max-width: 950px;
+        margin-bottom: 55px;
+        line-height: 1.33;
+    }
+}
+
+.services__carousel-container {
+    margin-bottom: 0;
+}
+
+.services__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: min-content;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    
+    @include helper.vp-1500 {
+        gap: 25px;
+        
+    }
+}
+
+.services__card {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: helper.$color-default-white;
+
+    @include helper.light-blur;
+    @include helper.vp-768 {
+        width: 250px;
+    }
+    @include helper.vp-1280 {
+        width: 370px;
+        border-radius: 10px;
+    }
+}
+
+.services__card-image-container {
+    width: 100%;
+    aspect-ratio: 180/97;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 180/97;
+    }
+    @include helper.vp-1280 {
+        aspect-ratio: 370/200;
+
+        & img {
+            aspect-ratio: 370/200; 
+        }
+    }
+}
+
+.services__card-container {
+    padding: 11px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    
+    @include helper.vp-768 {
+        padding: 16px 20px 15px 20px;
+    }
+    @include helper.vp-1280 {
+        padding: 34px 30px 35px 32px;
+    }
+}
+
+.services__card-title {
+    @include helper.subtitle-text;
+    @include helper.normal-margin;
+
+    @include helper.vp-768 {
+        margin-bottom: 10px;
+    }
+}
+
+.services__card-description {
+    @include helper.normal-text;
+    @include helper.normal-margin;
+
+    @include helper.vp-1500 {
+        font-size: 1.3rem;
+    }
+}
+
+.services__card-link-container {
+    display: flex;
+    flex-direction: column;
+
+    @include helper.vp-1280 {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.services__carousel-button-container {
+    display: none;
+
+    @include helper.vp-1280 {
+        display: flex;
+        height: 100%;
+        position: absolute;
+        top: -12px;
+        left: -5px;
+    }
+}
+
+.services__carousel-button-container--next {
+    @include helper.vp-1280 {
+        left: unset;
+        right: -22px;
+    }
+}
+
+.services__carousel-button  {
+    @include helper.vp-1280 {
+        width: 55px;
+        height: 55px;
+
+        & svg {
+            width: 15px;
+            height: 28
+        }
+    }
+}
+
+.services__card-link {
+    @include helper.pink-button-no-shadow;
+    @include helper.normal-text;
+    @include helper.normal-margin;
+
+    box-shadow: inset 0 0 13px 2px rgba(255, 255, 255, 0.5);
+    padding: 8px;
+    font-weight: 600;
+
+    @include helper.vp-768 {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    @include helper.vp-1280 {
+        padding: 10px 33px 11px 33px;
+        margin-right: 17px;
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 1000;
+    }
+}
+
+.services__card-additional {
+    @include helper.more-button;
+
+    margin-left: 3px;
+
+    @include helper.vp-1280 {
+        margin-left: 0;
+    }
+}

@@ -1,9 +1,10 @@
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
-import webp from 'gulp-webp';
+import webp from 'imagemin-webp';;
 import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
 import svgo from 'imagemin-svgo';
+import extReplace from 'gulp-ext-replace'
 
 const optimizeSvg = () =>
   gulp
@@ -49,9 +50,16 @@ const optimizePng = () =>
 const createWebp = () => {
   const root = '';
   return gulp
-      .src(`src/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
-      .pipe(gulp.dest(`src/img/${root}`));
+      .src(`build/img/${root}**/*.{png,jpg}`, {
+        encoding: false,
+      })
+      .pipe(imagemin([
+        webp({
+          quality: 90,
+        })
+      ]))
+      .pipe(extReplace('.webp'))
+      .pipe(gulp.dest(`build/img/${root}`));
 };
 
 export { createWebp, optimizeSvg, optimizePng, optimizeJpg};

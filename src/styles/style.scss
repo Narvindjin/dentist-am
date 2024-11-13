@@ -3,4 +3,17 @@
 @use "global/reboot";
 @use "global/utils";
 @use "global/container";
+@use "global/carousel";
+
+@use "blocks/header/header";
+@use "blocks/index/hero/hero";
+@use "blocks/index/hero/assortment";
+@use "blocks/index/services/services";
+@use "blocks/index/about/about";
+@use "blocks/index/personnel/personnel";
+@use "blocks/index/principles/principles";
+@use "blocks/index/reviews/reviews";
+@use "blocks/index/license/license";
+@use "blocks/index/address/address";
+@use "blocks/footer/footer";
 

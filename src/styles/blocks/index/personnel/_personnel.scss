@@ -1,0 +1,271 @@
+@use "../../../helper";
+
+.personnel {
+    position: relative;
+    z-index: 3;
+}
+
+.personnel__link {
+    @include helper.link-button;
+
+    @include helper.vp-1500 {
+        min-width: 177px;
+        padding-top: 14px;
+        padding-bottom: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+.personnel__title {
+    @include helper.second-title;
+
+    margin-bottom: 0;
+}
+
+.personnel__container {
+    @include helper.vp-1280 {
+        padding-bottom: 50px;
+        background-color: helper.$color-gray-background;
+    }
+
+    @include helper.vp-1500 {
+        border-radius: 50px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+.personnel__card {
+    @include helper.light-blur;
+
+    width: 202px;
+    padding: 10px 12px 23px 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    background-color: helper.$color-default-white;
+
+    @include helper.vp-768 {
+        width: 260px;
+        padding: 15px 17px 28px 20px;
+    }
+
+
+    @include helper.vp-1280 {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc((100% - 50px) / 3);
+        padding: 35px 31px;
+    }
+}
+
+.personnel__carousel {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: min-content;
+
+    @include helper.vp-1280 {
+        min-width: 100%;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+}
+
+.personnel__card-image-container {
+    @include helper.normal-margin;
+    padding-right: 2px;
+    width: 130px;
+    height: 128px;
+    min-height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include helper.vp-768 {
+        width: 160px;
+        height: 158px;
+    }
+
+    @include helper.vp-1280 {
+        width: 322px;
+        height: 323px;
+    }
+}
+
+.personnel__card-title {
+    @include helper.subtitle-text;
+    @include helper.normal-margin;
+
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 175px;
+    overflow: hidden;
+
+    @include helper.vp-768 {
+        width: 223px;
+    }
+
+    @include helper.vp-1280 {
+        width: 323px;
+    }
+
+    @include helper.vp-1500 {
+        margin-bottom: 16px;
+    }
+}
+
+.personnel__card-quick-description {
+    @include helper.normal-text;
+    @include helper.normal-margin;
+
+    color: helper.$color-pink;
+
+    @include helper.vp-1500 {
+        margin-bottom: 15px;
+        line-height: 1.36
+    }
+}
+
+.personnel__card-long-description {
+    @include helper.normal-text;
+    @include helper.normal-margin;
+
+    color: helper.$color-default-black-60;
+
+    @include helper.vp-1500 {
+        margin-bottom: 12px;
+    }
+}
+
+.personnel__card-link {
+    @include helper.button;
+    @include helper.normal-text;
+
+    padding: 6px 15px 7px 15px;
+    border-radius: 500px;
+    border: solid 0.5px helper.$color-pink;
+    color: helper.$color-pink;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+
+    @include helper.vp-1280 {
+        padding: 14px 30px;
+        width: fit-content;
+    }
+
+    @include helper.vp-1500 {
+        min-width: 161px;
+    }
+}
+
+.personnel__card-link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+
+
+    @include helper.vp-1500 {
+        height: 20px;
+        width: 21px;
+
+        & svg {
+            width: 100%;
+        }
+    }
+    & svg {
+        color: helper.$color-pink;
+        height: 100%;
+    }
+}
+
+.personnel__text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.personnel__upper-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+
+    @include helper.vp-1280 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include helper.vp-1280 {
+        margin-bottom: 50px;
+        padding-left: 30px;
+    }
+}
+
+.personnel__description-container {
+    display: none;
+    @include helper.left-top-ornament;
+
+    @include helper.vp-1280 {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: auto;
+        margin-right: -5px;
+        &::after {
+            top: -15px;
+        }
+    }
+}
+
+.personnel__card-text-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include helper.vp-1280 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.personnel__description {
+    @include helper.subtitle-text;
+
+    line-height: 1.5;
+    font-weight: 400;
+    width: 428px;
+}
+
+.personnel__button-container {
+    display: none;
+
+    @include helper.vp-1280 {
+        display: flex;
+    }
+}
+
+.personnel__button {
+    @include helper.pink-button-no-shadow;
+
+    font-weight: 500;
+    opacity: 0.9;
+
+    @include helper.vp-1280 {
+        padding: 16px 40px;
+    }
+
+    @include helper.vp-1500 {
+        font-size: 1.6rem;
+    }
+}

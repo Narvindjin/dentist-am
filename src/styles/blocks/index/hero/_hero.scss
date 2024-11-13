@@ -1,0 +1,107 @@
+@use "../../../helper";
+
+
+.hero {
+    @include helper.vp-1280 {
+        position: relative;
+        background-color: helper.$color-white-background;
+        overflow: hidden;
+    }
+}
+
+.hero__title {
+    margin-top: 0;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 800;
+    max-width: 400px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+
+
+    & strong {
+        color: helper.$color-pink;
+    }
+
+    @include helper.vp-768 {
+        font-size: 3.6rem;
+    }
+
+    @include helper.vp-1500 {
+        font-size: 5.5rem;
+        line-height: 7rem;
+        margin-bottom: 34px;
+    }
+}
+
+.hero__container {
+    padding-top: 0;
+
+    @include helper.vp-1280 {
+        padding-top: 80px;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+}
+
+.hero__description {
+    @include helper.subtitle-text;
+    
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 400;
+    @include helper.text-block-width;
+
+    & b {
+        font-weight: 700;
+    }
+
+    & strong {
+        font-weight: 700;
+        color: helper.$color-pink;
+    }
+
+    @include helper.vp-1280 {
+        width: 425px;
+        margin-left: 57px;
+        margin-bottom: 26px;
+    }
+}
+
+.hero__background-desktop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 5%;
+
+    & picture {
+        width: 100%;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include helper.vp-1280 {
+        display: flex;
+    }
+}
+
+.hero__wrapper {
+    @include helper.vp-1280 {
+        padding-top: 80px;
+        padding-bottom: 60px;   
+    }
+}

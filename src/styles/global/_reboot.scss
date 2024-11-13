@@ -17,7 +17,7 @@ html {
   font-weight: 400;
   font-size: helper.$fz-modifier;
   line-height: 24px;
-  font-family: helper.$ff-roboto;
+  font-family: helper.$ff-manrope;
   color: helper.$color-default-black;
   scroll-behavior: smooth;
 
@@ -30,12 +30,25 @@ body {
   width: 100%;
   height: 100%;
   font-size: helper.$fz-default;
-  background-color: helper.$color-default-white;
   position: relative;
+  background-color: helper.$color-white-background;
+
+  @include helper.vp-1280 {
+    background-color: helper.$color-default-white;
+  }
 }
 
 .main {
   overflow-x: hidden;
+  padding-top: 64px;
+
+  @include helper.vp-768 {
+    padding-top: 76px;
+  }
+
+  @include helper.vp-992 {
+    padding-top: 0;
+  }
 }
 
 a {

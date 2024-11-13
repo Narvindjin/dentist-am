@@ -5,12 +5,35 @@ $ff-rouble: "Rouble", "Arial", sans-serif;
 
 $ff-manrope: "Manrope", "Arial", sans-serif;
 
-$color-default-black:               #102654;
+$color-default-black:               #3f3f3f;
+$color-default-black-30:            rgba(63, 63, 63, 0.3);
+$color-default-black-60:            rgba(63, 63, 63, 0.6);
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
+$color-blur:                        rgba(0, 0, 0, 0.1);        
+
+$color-white-background:            #fdfdfd;
+$color-gray-background:             #f5f5f5;
+$color-pink:                        #e21f4d;
+$color-pink-transparent:            rgba(226, 31, 77, 0.5);
+$color-gray:                        #767676;
 
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
 
+$normal-text-mobile:                1rem;
+$large-text-mobile:                 1.2rem;
+$title-text-mobile:                 1.6rem;
+
+$normal-text-tablet:                1.2rem;
+$large-text-tablet:                 1.5rem;
+$title-text-tablet:                 2.4rem;
+
+$normal-text-desktop:               1.4rem;
+$large-text-desktop:                1.8rem;
+$title-text-desktop:                3rem;
+
 $vp-768:                            768px;
+$vp-992:                            992px;
 $vp-1280:                           1280px;
+$vp-1500:                           1500px;

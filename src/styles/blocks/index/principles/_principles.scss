@@ -1,0 +1,238 @@
+@use "../../../helper";
+
+.principles__container {
+    @include helper.vp-1280 {
+        padding-top: 48px;
+        flex-direction: row;
+        padding-bottom: 60px;
+        justify-content: flex-end;
+    }
+}
+
+.principles__link {
+    @include helper.link-button;
+
+    @include helper.vp-1500 {
+        min-width: 177px;
+        padding-bottom: 14px;
+    }
+}
+
+.principles__title {
+    @include helper.second-title;
+
+    max-width: 240px;
+    margin-bottom: 28px;
+
+    & strong {
+        font-weight: 700;
+    }
+
+    & b {
+        font-weight: 700;
+    }
+
+    @include helper.vp-768 {
+        max-width: 500px;
+    }
+
+    @include helper.vp-1500 {
+        max-width: 575px;
+    }
+}
+
+.principles__list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include helper.desktop-description-block;
+
+    @include helper.vp-1280 {
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+}
+
+.principles__item {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    @include helper.sharp-blur;
+
+    @include helper.vp-1280 {
+        border-radius: 11px;
+        filter: unset;
+        @include helper.light-blur;
+        width: 400px;
+        background-color: helper.$color-default-white;
+    }
+}
+
+.principles__item-container {
+    @include helper.icon-center-top;
+
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 15px 20px;
+    border-radius: 8px;
+    width: 100%;
+
+    @include helper.vp-1280 {
+        flex-direction: row;
+        padding: 10px 20px;
+        border-radius: 11px;
+    }
+}
+
+.principles__description {
+    @include helper.normal-text;
+
+    @include helper.vp-1280 {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1.1rem;
+    }
+
+    @include helper.vp-1500 {
+        font-size: 1.1rem;
+    }
+}
+
+.principles__image-container {
+    display: none;
+    width: 100%;
+    position: relative;
+    left: -45px;
+    max-width: 500px;
+
+    &::before {
+        content: '';
+        width: 79px;
+        height: 72px;
+        @include helper.star-ornament;
+        position: absolute;
+        left: -85px;
+        top: 40px;
+        transform: rotate(15deg);
+    }
+
+    @include helper.vp-1280 {
+        display: flex;
+        @include helper.circle-background;
+        padding-left: 0;
+
+        &::after {
+            max-width: unset;
+            width: 1131px;
+            min-width: 1131px;
+            top: -200px;
+            left: 300px;
+        }
+    }
+
+    @include helper.vp-1500 {
+        max-width: unset;
+    }
+}
+
+.principles__text-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include helper.vp-1280 {
+        z-index: 4;
+        &::before {
+            content: '';
+            width: 30px;
+            height: 27px;
+            right: 45px;
+            top: 18px;
+            @include helper.star-ornament;
+            position: absolute;
+            transform: rotate(10deg)
+        }
+    
+        &::after {
+            content: '';
+            width: 52px;
+            height: 47px;
+            @include helper.star-ornament;
+            position: absolute;
+            bottom: -50px;
+            right: 150px;
+            transform: rotate(60deg);
+        }
+    }
+}
+
+.principles__icon-container {
+    &.icon-container {
+        @include helper.vp-1280 {
+            display: flex;
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 20px;
+            background-color: helper.$color-gray-background;
+            border-radius: 50%;
+
+            & * {
+                width: 29px;
+            }
+        }
+    }
+}
+
+.principles__link-visit {
+    @include helper.pink-button;
+    display: none;
+
+    @include helper.vp-1280 {
+        display: flex;
+        margin-left: 100px;
+    }
+}
+
+.principles__image-wrapper {
+    position: relative;
+    z-index: 3;
+    aspect-ratio: 566/655;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &::before {
+        content: '';
+        width: 150px;
+        height: 136px;
+        @include helper.star-ornament;
+        position: absolute;
+        bottom: 0;
+        left: -80px;
+        transform: rotate(170deg);
+        filter: blur(4px);
+    }
+
+    &::after {
+        content: '';
+        width: 79px;
+        height: 72px;
+        @include helper.star-ornament;
+        position: absolute;
+        top: 220px;
+        right: -20px;
+        transform: rotate(10deg);
+        filter: blur(2px);
+    }
+}

@@ -1,0 +1,228 @@
+@use "../../../helper";
+
+.about__container {
+    @include helper.vp-1280 {
+        padding-top: 82px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.about__text-container {
+    display: flex;
+    flex-direction: column;
+
+    @include helper.vp-1280 {
+        order: 1;
+        margin-bottom: 70px;
+        position: relative;
+    }
+}
+
+.about__link {
+    @include helper.link-button;
+    @include helper.normal-margin;
+}
+
+.about__title {
+    @include helper.second-title;
+    @include helper.left-top-ornament;
+    margin-bottom: 5px;
+
+    @include helper.vp-768 {
+        margin-bottom: 13px;
+    }
+
+    @include helper.vp-1280 {
+        width: 432px;
+        margin-bottom: 11px;
+        line-height: 4rem;
+    }
+}
+
+.about__description-container {
+    display: flex;
+    flex-direction: column;
+
+    @include helper.desktop-description-block;
+}
+
+.about__description {
+    @include helper.normal-text;
+
+    @include helper.text-block-width;
+
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 4px;
+
+    @include helper.vp-768 {
+        font-size: 1.3rem;
+    }
+
+    @include helper.vp-1280 {
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+        min-width: unset;
+        font-weight: 600;
+    }
+}
+
+.about__description--desktop {
+    display: none;
+
+    @include helper.vp-1280 {
+        font-weight: 400;
+        display: inline;
+    }
+}
+
+.about__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 8px;
+
+    @include helper.vp-1280 {
+        order: 0;
+        width: 100%;
+        padding-bottom: 0;
+    }
+}
+
+.about__card-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12%;
+
+    @include helper.vp-1280 {
+        gap: 0;
+        margin-top: 30px;
+        margin-bottom: 33px;
+    }
+}
+
+.about__card-wrapper {
+    width: 100%;
+    aspect-ratio: 300/220;
+    display: flex;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @include helper.vp-1280 {
+        max-width: unset;
+        aspect-ratio: unset;
+        position: unset;
+    }
+}
+
+.about__card-image-container {
+    display: flex;
+    position: absolute;
+    width: 84%;
+    aspect-ratio: 252/239;
+    right: 9px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include helper.vp-1280 {
+        aspect-ratio: 512/487;
+        width: 476px;
+        right: 0;
+        bottom: 0;
+    }
+
+    @include helper.vp-1500 {
+        right: -109px;
+        width: 512px;
+    }
+}
+
+.about__card-signature-container {
+    display: flex;
+    position: absolute;
+    width: 65px;
+    aspect-ratio: 65/42;
+    left: 14%;
+    bottom: 22%;
+    transform: rotate(15deg);
+
+    @include helper.vp-768 {
+        width: 85px;
+    }
+
+    @include helper.vp-1280 {
+        display: none;
+        top: 97%;
+        width: 107px;
+        left: 54%;
+        aspect-ratio: 107/70;
+    }
+}
+
+.about__card-signature-container--desktop {
+    display: none;
+    
+    @include helper.vp-1280 {
+        display: flex;
+    }
+}
+
+.about__card-title {
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 400;
+    max-width: 120px;
+    margin:0;
+
+    @include helper.vp-768 {
+        font-size: 4rem;
+    }
+
+    @include helper.vp-1280 {
+        @include helper.left-top-ornament;
+        margin-bottom: 20px;
+    }
+
+    @include helper.vp-1500 {
+        font-size: 5.5rem;
+    }
+}
+
+.about__card-title-colored {
+    color: helper.$color-pink;
+    font-weight: 600;
+}
+
+.about__card-description {
+    @include helper.normal-text;
+
+    font-weight: 500;
+
+    @include helper.vp-768 {
+        @include helper.subtitle-text;
+        font-weight: 500;
+    }
+}
+
+.about__card-link {
+    @include helper.pink-button;
+
+    @include helper.vp-1280 {
+        margin-left: 0;
+        padding: 22px 41px 23px 42px;
+    }
+
+    @include helper.vp-1500 {
+        font-size: 1.6rem;
+    }
+}
