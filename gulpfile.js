@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import { deleteAsync } from 'del';
 import {compileStyles, compileStylesProd} from './gulp/compileStyles.js';
-import { copy, copyImages, copySvg } from './gulp/copyAssets.js';
+import { copy, copyImages, copySvg, copyVarious } from './gulp/copyAssets.js';
 import {compileScripts, compileScriptsProd} from './gulp/compileScripts.js';
 import {optimizeSvg, createWebp, optimizePng, optimizeJpg} from './gulp/optimizeImages.js';
 
@@ -37,7 +37,7 @@ const refresh = (done) => {
   server.reload();
   done();
 };
-const build = gulp.series(clean, copy, gulp.parallel(compileStylesProd, compileScriptsProd, optimizePng, optimizeJpg, optimizeSvg), createWebp);
+const build = gulp.series(clean, copyVarious, gulp.parallel(compileStylesProd, compileScriptsProd, optimizePng, optimizeJpg, optimizeSvg), createWebp);
 const dev = gulp.series(clean, copy, gulp.parallel(compileScripts, compileStyles, optimizePng, optimizeJpg, optimizeSvg), createWebp, syncServer);
 const start = gulp.series(clean, copy, gulp.parallel(compileStyles, compileScripts), createWebp, syncServer);
 

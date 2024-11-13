@@ -8,7 +8,9 @@ import extReplace from 'gulp-ext-replace'
 
 const optimizeSvg = () =>
   gulp
-      .src('build/img/**/*.svg')
+      .src('src/img/**/*.svg', {
+        encoding: false,
+      })
       .pipe(
           imagemin([
             svgo({
@@ -30,19 +32,21 @@ const optimizeSvg = () =>
 
 const optimizeJpg = () =>
   gulp
-      .src('build/img/**/*.{jpg,jpeg}')
-      .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
+      .src('src/img/**/*.{jpg,jpeg}', {
+        encoding: false,
+      })
+      .pipe(imagemin([mozJpeg({quality: 90})]))
       .pipe(gulp.dest('build/img'));
 
 const optimizePng = () =>
   gulp
-      .src('build/img/**/*.png')
+      .src('src/img/**/*.png', {
+        encoding: false,
+      })
       .pipe(
           imagemin([
             pngQuant({
-              speed: 1,
               strip: true,
-              dithering: 1,
               quality: [0.8, 0.9],
             })]))
       .pipe(gulp.dest('build/img'));
